@@ -57,7 +57,7 @@ public class TestHttp {
     @Test
     public void runapi() throws IOException {
         URL url = new URL("https://hub-cloud.browserstack.com/wd/hub/session");
-        //URL url = new URL("http://abdulqadirkhande_5QjKSy:vePUAny3y5yaMQ2xNBtf@hub-cloud.browserstack.com/wd/hub/session");//Gives 401 but works when with user and pass in body
+        //URL url = new URL("http://usrkey:accesskey@hub-cloud.browserstack.com/wd/hub/session");//Gives 401 but works when with user and pass in body
         HttpURLConnection httpClient = (HttpURLConnection) url.openConnection();
 
         //add request header
@@ -66,7 +66,7 @@ public class TestHttp {
         httpClient.setRequestProperty("Accept", "*/*");
 
         httpClient.setDoOutput(true);
-        String jsonInputString = "{\"capabilities\":{\"firstMatch\":[{}],\"alwaysMatch\":{}},\"desiredCapabilities\":{\"name\":\"http-session\",\"browserstack.user\":\"abdulqadirkhande_5QjKSy\",\"browserstack.key\":\"vePUAny3y5yaMQ2xNBtf\"}}";
+        String jsonInputString = "{\"capabilities\":{\"firstMatch\":[{}],\"alwaysMatch\":{}},\"desiredCapabilities\":{\"name\":\"http-session\",\"browserstack.user\":\"userkey\",\"browserstack.key\":\"accesskey\"}}";
         //String jsonInputString = "{\"capabilities\":{\"firstMatch\":[{}],\"alwaysMatch\":{}},\"desiredCapabilities\":{\"name\":\"http-session\"}}";
         OutputStream os = httpClient.getOutputStream();
         byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
@@ -86,7 +86,7 @@ public class TestHttp {
     @Test
     public void whenPostJson_thenCorrect() throws IOException {
         OkHttpClient client = new OkHttpClient();
-        String json = "{\"capabilities\":{\"firstMatch\":[{}],\"alwaysMatch\":{}},\"desiredCapabilities\":{\"name\":\"http-session\",\"browserstack.user\":\"abdulqadirkhande_5QjKSy\",\"browserstack.key\":\"vePUAny3y5yaMQ2xNBtf\"}}";
+        String json = "{\"capabilities\":{\"firstMatch\":[{}],\"alwaysMatch\":{}},\"desiredCapabilities\":{\"name\":\"http-session\",\"browserstack.user\":\"userkey\",\"browserstack.key\":\"accesskey\"}}";
         URL url = new URL("https://hub-cloud.browserstack.com/wd/hub/session");
         RequestBody body = RequestBody.create(
                 MediaType.parse("application/json"), json);
