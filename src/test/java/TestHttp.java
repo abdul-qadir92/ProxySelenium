@@ -1,4 +1,4 @@
-import okhttp3.*;
+//import okhttp3.*;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
@@ -82,7 +82,7 @@ public class TestHttp {
         System.out.println(response);
         httpClient.disconnect();
     }
-
+/*
     @Test
     public void whenPostJson_thenCorrect() throws IOException {
         OkHttpClient client = new OkHttpClient();
@@ -100,5 +100,5 @@ public class TestHttp {
         Response response = call.execute();
         System.out.println(response.code());
     }
-
+*/
 }

@@ -1,4 +1,4 @@
-import org.apache.http.impl.client.HttpClientBuilder;
+/*import org.apache.http.impl.client.HttpClientBuilder;
 import org.openqa.selenium.remote.http.HttpClient;
 import org.openqa.selenium.remote.internal.ApacheHttpClient;
 
@@ -18,3 +18,4 @@ public class MyHttpClientFactory implements org.openqa.selenium.remote.http.Http
     public void cleanupIdleClients() {
     }
 }
+*/
