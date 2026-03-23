@@ -13,7 +13,7 @@
 ////Selenium 4.1.x
 //public class iOSImages extends Thread{
 //        public static String userName = "abdulqadirkhande_5QjKSy";
-//        public static String accessKey = "1tqwytqwEwJSAvksxn7y";
+//        public static String accessKey = "";
 //        public static void main(String args[]) throws MalformedURLException, InterruptedException {
 //            DesiredCapabilities caps = new DesiredCapabilities();
 //            caps.setCapability("device", "iPhone 12 Pro Max");
